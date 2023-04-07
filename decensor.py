@@ -373,8 +373,8 @@ class Decensor:
     # equivalent to decensor.start() (running as QtThread)
 if __name__ == '__main__':
     t = {}
-    t.decensor = Decensor(t)
-    t.current_is_mosaic = None
+    t["decensor"] = Decensor(t)
+    t["current_is_mosaic"] = None
     # options variations = 1, 2, 4
     variations = 1
     is_mosaic = False
@@ -383,9 +383,9 @@ if __name__ == '__main__':
     #     t.current_is_mosaic = is_mosaic
     #     self.load_model()
     if is_mosaic:
-        t.decensor.is_mosaic = False
+        t["decensor"].is_mosaic = False
     else:
-        t.decensor.is_mosaic = True
-    t.decensor.variations = variations
-    t.decensor.run()
+        t["decensor"].is_mosaic = True
+    t["decensor"].variations = variations
+    t["decensor"].run()
     # t.decensor.decensor_all_images_in_folder()
