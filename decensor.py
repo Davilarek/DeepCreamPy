@@ -80,7 +80,8 @@ class Decensor:
         return mask
 
     def load_model(self):
-        self.signals.insertText_progressCursor.emit("Loading model ... please wait ...\n")
+        # self.signals.insertText_progressCursor.emit("Loading model ... please wait ...\n")
+        print("Loading model ... please wait ...\n")
         if self.model is None :
             self.model = InpaintNN(bar_model_name = "./models/bar/Train_775000.meta",
                                    bar_checkpoint_name = "./models/bar/",
